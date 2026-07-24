@@ -1,67 +1,51 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Mock Hub Test</title>
-
-<link rel="stylesheet" href="test.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mock Hub Test</title>
+  <link rel="stylesheet" href="test.css">
 </head>
-
 <body>
 
 <header>
-<h1>📘 Mock Hub</h1>
-
-<div id="timer">⏱ 30:00</div>
+  <h1>🎓 Mock Hub</h1>
+  <div id="timer">30:00</div>
 </header>
 
 <div class="container">
 
-<div class="left">
+  <div class="left">
 
-<h2 id="questionNo">Question 1 of 50</h2>
+    <h2 id="questionNo">Question 1</h2>
 
-<p id="question">
-लोड हो रहा है...
-</p>
+    <div id="question">
+      Loading...
+    </div>
 
-<div id="options"></div>
+    <div id="options"></div>
 
-<div class="buttons">
+    <div class="buttons">
+      <button onclick="prevQuestion()">⬅ Previous</button>
+      <button onclick="nextQuestion()">Next ➡</button>
+      <button onclick="submitTest()">Submit Test</button>
+    </div>
 
-<button onclick="prevQuestion()">
-Previous
-</button>
+    <div id="result" style="display:none;">
+      <h2>Result</h2>
+      <p id="resultText"></p>
+    </div>
 
-<button onclick="nextQuestion()">
-Next
-</button>
+  </div>
 
-<button onclick="submitTest()">
-Submit Test
-</button>
-
-</div>
-
-</div>
-
-<div class="right">
-
-<h3>Question Palette</h3>
-
-<div id="palette"></div>
+  <div class="right">
+    <h3>Question Palette</h3>
+    <div id="palette"></div>
+  </div>
 
 </div>
 
-</div>
-
-<div id="result" style="display:none; margin-top:20px; padding:20px; background:#fff; border-radius:10px;">
-    <h2>Result</h2>
-    <p id="resultText"></p>
-</div>
-  <script src="test.js"></script>
+<script src="test.js"></script>
 
 </body>
 </html>
