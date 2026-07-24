@@ -55,7 +55,6 @@ html += `
 ${opt}
 </label><br><br>`;
 });
-
 document.getElementById("options").innerHTML = html;
 }
 
