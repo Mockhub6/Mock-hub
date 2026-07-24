@@ -107,3 +107,6 @@ window.onload = function () {
   createPalette();
   startTimer();
 };
+console.log("test.js loaded");
+console.log(questions);
+loadQuestion();
