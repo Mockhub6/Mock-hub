@@ -69,7 +69,7 @@ document.getElementById("result").style.display = "block";
 document.getElementById("resultText").innerHTML =
 "आपका स्कोर: " + score + " / " + questions.length +
 "<br>प्रतिशत: " + Math.round((score / questions.length) * 100) + "%";
-}
+document.getElementById("result").scrollIntoView({ behavior: "smooth" });
 
 function createPalette() {
   let html = "";
