@@ -1,4 +1,4 @@
-const questions = [
+let questions = JSON.parse(localStorage.getItem("questions")) || [
 {
 question: "भारत की राजधानी क्या है?",
 options: ["मुंबई", "दिल्ली", "चेन्नई", "जयपुर"],
