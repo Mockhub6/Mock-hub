@@ -28,13 +28,23 @@ margin-top:10px;
 
 <h2>Mock Hub Admin Panel</h2>
 
-<p>Questions JSON</p>
+<input type="text" id="question" placeholder="Question"><br><br>
 
-<textarea id="data"></textarea>
+<input type="text" id="option1" placeholder="Option 1"><br><br>
 
-<br>
+<input type="text" id="option2" placeholder="Option 2"><br><br>
 
-<button onclick="saveData()">Save Questions</button>
+<input type="text" id="option3" placeholder="Option 3"><br><br>
+
+<input type="text" id="option4" placeholder="Option 4"><br><br>
+
+<input type="number" id="answer" placeholder="Correct Option (0-3)"><br><br>
+
+<button onclick="saveQuestion()">Add Question</button>
+
+<hr>
+
+<div id="list"></div>
 
 <script>
 document.getElementById("data").value =
