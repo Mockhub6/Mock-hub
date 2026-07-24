@@ -65,7 +65,10 @@ let score = 0;
 answers.forEach((a, i) => {
 if (a === questions[i].answer) score++;
 });
-alert("आपका स्कोर: " + score + " / " + questions.length);
+document.getElementById("result").style.display = "block";
+document.getElementById("resultText").innerHTML =
+"आपका स्कोर: " + score + " / " + questions.length +
+"<br>प्रतिशत: " + Math.round((score / questions.length) * 100) + "%";
 }
 
 function createPalette() {
