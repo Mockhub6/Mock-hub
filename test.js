@@ -65,7 +65,20 @@ let score = 0;
 answers.forEach((a, i) => {
 if (a === questions[i].answer) score++;
 });
-alert("आपका स्कोर: " + score + " / " + questions.length);
+alert("आपका स्कोर: " + score + " / " + questions.length)
 }
 
-window.onload = loadQuestion;
+function createPalette() {
+  let html = "";
+
+  questions.forEach((q, i) => {
+    html += `<button onclick="current=${i};loadQuestion()">${i + 1}</button>`;
+  });
+
+  document.getElementById("palette").innerHTML = html;
+}
+
+window.onload = function () {
+  loadQuestion();
+  createPalette();
+};
