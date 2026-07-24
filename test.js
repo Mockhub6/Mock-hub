@@ -65,7 +65,7 @@ let score = 0;
 answers.forEach((a, i) => {
 if (a === questions[i].answer) score++;
 });
-alert("आपका स्कोर: " + score + " / " + questions.length)
+alert("आपका स्कोर: " + score + " / " + questions.length);
 }
 
 function createPalette() {
