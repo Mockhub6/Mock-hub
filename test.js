@@ -17,7 +17,28 @@ answer: 1
 ];
 
 let current = 0;
+const TEST_TIME = 30;
+let timeLeft = TEST_TIME * 60;
 let answers = new Array(questions.length).fill(null);
+function startTimer() {
+  const timer = setInterval(function () {
+    if (timeLeft < 0) return;
+    let minutes = Math.floor(timeLeft / 60);
+    let seconds = timeLeft % 60;
+
+    document.getElementById("timer").innerHTML =
+      "⏱ " + minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+
+    if (timeLeft <= 0) {
+      timeLeft = 0;
+      clearInterval(timer);
+      submitTest();
+      return;
+    }
+
+    timeLeft--;
+  }, 1000);
+}
 
 function loadQuestion() {
 document.getElementById("questionNo").innerText =
@@ -82,6 +103,8 @@ function createPalette() {
 }
 
 window.onload = function () {
+  document.getElementById("timer").innerHTML = "🕒 " + TEST_TIME + ":00";
   loadQuestion();
   createPalette();
+  startTimer();
 };
